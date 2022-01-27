@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addTodo, deleteTodo, iscomplete, updateTodo } from "./actions/action";
@@ -49,7 +49,6 @@ const App = () => {
               />
               {toggle ? (
                 <button type="submit">
-                  
                   <AddIcon />
                 </button>
               ) : (
@@ -78,7 +77,7 @@ const App = () => {
                 {!curr.isComplete ? (
                   <EditIcon className="edit" onClick={() => edit(curr)} />
                 ) : (
-                  <div className="edit"></div>
+                  <div className="edit"> </div>
                 )}
 
                 <DeleteIcon
